@@ -10,12 +10,14 @@ DEVICE_PATH := device/samsung/beyond0qlte
 PRODUCT_SOONG_NAMESPACES += \
     $(DEVICE_PATH)
 
-# Overlays
-PRODUCT_PACKAGE_OVERLAYS += $(DEVICE_PATH)/overlay
-
 # Resolution
 TARGET_SCREEN_HEIGHT := 3200
 TARGET_SCREEN_WIDTH := 1440
+
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(DEVICE_PATH)/overlay \
+    $(DEVICE_PATH)/overlay-lineage
 
 PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
