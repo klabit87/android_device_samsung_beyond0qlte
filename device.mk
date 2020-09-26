@@ -23,6 +23,10 @@ PRODUCT_AAPT_CONFIG := large
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
 
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint@2.1-service.samsung-beyond0qlte
+
 # Lineage
 ifneq ($(LINEAGE_BUILD),)
 -include $(DEVICE_PATH)/device_lineage.mk
