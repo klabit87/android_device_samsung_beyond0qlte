@@ -1,5 +1,5 @@
 # Inherit common device configuration
-$(call inherit-product, device/samsung/sm8150-common/sm8150.mk)
+$(call inherit-product, device/samsung/sm8150-common/common.mk)
 
 # Proprietary blobs
 $(call inherit-product-if-exists, vendor/samsung/sm8150-common/sm8150-common-vendor.mk)
@@ -13,15 +13,20 @@ PRODUCT_SOONG_NAMESPACES += \
 # Resolution
 TARGET_SCREEN_HEIGHT := 3200
 TARGET_SCREEN_WIDTH := 1440
+TARGET_BOOTANIMATION_HALF_RES := true
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage
 
-PRODUCT_AAPT_CONFIG := large
+PRODUCT_AAPT_CONFIG := large xlarge
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREBUILT_DPI := xxxhdpi xxhdpi xhdpi hdpi
+
+# Display
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sf.lcd_density=420
 
 # Fingerprint
 PRODUCT_PACKAGES += \
