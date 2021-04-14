@@ -21,10 +21,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/beyond0qlte/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_beyond0qlte
+PRODUCT_NAME := carbon_beyond0qlte
 PRODUCT_DEVICE := beyond0qlte
 PRODUCT_BRAND := samsung
 PRODUCT_MANUFACTURER := samsung
@@ -34,8 +34,8 @@ PRODUCT_GMS_CLIENTID_BASE := android-samsung
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
-TARGET_SCREEN_HEIGHT := 3200
-TARGET_SCREEN_WIDTH := 1440
+#TARGET_SCREEN_HEIGHT := 3200
+#TARGET_SCREEN_WIDTH := 1440
 
 # Use the latest approved GMS identifiers
 PRODUCT_GMS_CLIENTID_BASE := android-samsung-ss
